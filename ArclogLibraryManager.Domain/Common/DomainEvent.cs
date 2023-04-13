@@ -2,6 +2,6 @@
 
 public abstract record DomainEvent<TAgg>(
     Guid EventId,
-    Id<TAgg> EntityId,
-    DateTime OccuredAt)
+    DateTime OccuredAt,
+    Id<TAgg> EntityId)
     where TAgg : AggregateRoot<TAgg>;
